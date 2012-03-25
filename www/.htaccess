@@ -1,0 +1,68 @@
+<IfModule mod_expires.c>
+   ExpiresActive On
+   ExpiresByType image/jpg "access 1 week"
+   ExpiresByType image/jpeg "access 1 week"
+   ExpiresByType image/gif "access 1 week"
+   ExpiresByType image/png "access 1 week"
+   ExpiresByType text/css "access 1 week"
+   ExpiresByType application/pdf "access 1 month"
+   ExpiresByType text/x-javascript "access 1 week"
+   ExpiresByType application/x-shockwave-flash "access 1 week"
+   ExpiresByType image/x-icon "access 1 year"
+   ExpiresDefault "access 2 days"                                                                         
+</IfModule>                                                                                               
+                                                                                                          
+<IfModule mod_setenvif.c>                                                                                 
+   BrowserMatch "MSIE" force-no-vary                                                                      
+   BrowserMatch "Mozilla/4.[0-9]{2}" force-no-vary                                                        
+</IfModule>                                                                                               
+                                                                                                          
+<IfModule mod_headers.c>                                                                                  
+   <FilesMatch .*\.(js|css)$>                                                                             
+      Header set Cache-control: private                                                                   
+   </FilesMatch>                                                                                          
+   <FilesMatch .*\.(gif|jpg|png)$>                                                                        
+      Header set Cache-control: public
+   </FilesMatch>
+ 
+   Header unset Etag
+   FileETag none
+</IfModule>
+
+RewriteEngine On
+
+# htaccess forbidden
+RewriteRule .htaccess - [F]
+
+RewriteRule \.svn - [F]
+
+
+RewriteRule ^storage/keys/([0-9]+)/(.*)\.pem$ farms_view.php?id=$1&task=download_private_key [NE,L]
+
+#Farm events RSS
+RewriteRule ^storage/events/([0-9]+)/rss\.xml$ rss.xml.php?farmid=$1 [NE,L]
+
+#Environment
+RewriteRule ^query-env/([0-9-]+)/(.*)$ environment.php?version=$1&operation=$2&%{QUERY_STRING} [NE,L]
+
+
+# New UI Controler
+RewriteRule ^js/(.*)-[0-9]+\.js js/$1.js [NE,L]
+
+RewriteRule ^js/(.*)-[0-9]+\.css js/$1.css [NE,L]
+
+RewriteRule ^ui/js/(.*)-[0-9]+\.js ui/js/$1.js [NE,L]
+RewriteRule ^ui/js/(.*)-[0-9]+\.css ui/js/$1.css [NE,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_URI} ^[^\.]+$
+RewriteRule ^(v[0-9]+)/.*$ /api.php?version=$1&%{QUERY_STRING}  [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_URI} ^[^\.]+$
+RewriteRule ^.*$ /ui.php [L]
+
+
+

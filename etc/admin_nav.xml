@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<menu>
+	<node title="Accounts">
+		<item href="#/admin/accounts">Manage</item>
+	</node>
+
+	<node title="Logs">
+		<item href="#/admin/logs/view">System log</item>
+	</node>
+
+	<node title="Roles">
+		<item href="#/roles/view" search="SELECT COUNT(*) FROM roles WHERE name LIKE '%s'">View all</item>		
+	</node>
+
+	<node title="Scripts">
+		<item href="#/scripts/view">View all</item>		
+	</node>
+
+	<node title="Settings">
+		<item href="#/dnszones/defaultRecords">Default DNS records</item>
+		<separator />
+		<node title="Shared roles">
+			<item href="#/roles/view?origin=Shared">View all</item>
+			<item href="#/roles/edit">Add new</item>
+		</node>
+		<separator />
+		<item href="#/admin/settings/core">Core settings</item>
+	</node>
+	
+</menu>

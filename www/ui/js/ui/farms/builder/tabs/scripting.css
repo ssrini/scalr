@@ -1,0 +1,67 @@
+div.scalr-ui-farms-builder-tab-scripting {
+	background-color: #fff;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+
+div.scalr-ui-farms-builder-tab-scripting div.empty {
+	font-size: 12px;
+	padding: 10px;
+	text-align: center;
+}
+
+div.scalr-ui-farms-builder-tab-scripting div.title {
+	background-color: #E8EDF7;
+	background-repeat: no-repeat;
+	margin-top: 10px;
+	padding: 5px;
+	padding-left: 10px;
+}
+
+div.scalr-ui-farms-builder-tab-scripting div.title span {
+	font-family: "Verdana";
+	font-size: 12px;
+	font-weight: bold;
+	color: #15428B;
+}
+
+div.scalr-ui-farms-builder-tab-scripting ul {
+	background-color: #F1F4FA;
+	display: block;
+	height: auto;
+	overflow: hidden;
+	padding-top: 5px;
+}
+
+div.scalr-ui-farms-builder-tab-scripting ul li {
+	display: block;
+	background-color: #FFF;
+	background-image: url('/ui/images/ui/farms/scripting/execution.png');
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	padding: 6px;
+	font-size: 12px;
+	overflow: hidden;
+	text-align: center;
+
+	margin-bottom: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+
+	border-width: 1px;
+	border-color: #C0D5FA;
+	border-style: solid;
+}
+
+div.scalr-ui-farms-builder-tab-scripting ul li.disabled {
+	background-image: url('/ui/images/ui/farms/scripting/execution_disable.png');
+}
+
+div.scalr-ui-farms-builder-tab-scripting ul li:hover {
+	background-color: #EEF5FD;
+}
+
+div.scalr-ui-farms-builder-tab-scripting ul li.selected {
+	background-color: #D6EAFC;
+}

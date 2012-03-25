@@ -1,0 +1,15 @@
+[subject]New script awaits approval[/subject]
+Dear Scalr Team member,
+
+User {$client.fullname},<{$client.email}> submitted a script '{$script.name}':{$script.version}.
+It needs to be approved to become available for other users. 
+
+{if $comments}
+Comments: {$comments}
+{/if}
+
+See all {$count} contributed scripts that await approval:
+{$link}
+
+Regards,
+The Scalr Team

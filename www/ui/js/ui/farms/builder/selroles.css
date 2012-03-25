@@ -1,0 +1,222 @@
+div.scalr-ui-farmselroles-blocks {
+	float: left;
+	position: absolute;
+	height: 130px;
+}
+
+/* Add button */
+div.scalr-ui-farmselroles-add {
+	left: 0px;
+	width: 40px;
+	cursor: pointer;
+	border-width: 1px;
+	border-style: none solid none none;
+	border-color: #8DB2E3;
+	background-color: #D9EAFD;
+	background-image: url('/ui/images/ui/farms/selroles/add.png');
+	background-position: center center;
+	background-repeat: no-repeat
+}
+
+div.scalr-ui-farmselroles-add:hover {
+	background-image: url('/ui/images/ui/farms/selroles/add_hover.png');
+}
+
+div.scalr-ui-farmselroles-pad {
+	left: 0px;
+	width: 100%;
+	top: 130px;
+	height: 19px;
+	border-width: 1px;
+	border-style: solid none solid none;
+	border-color: #8DB2E3;
+	background-color: #D9EAFD;
+}
+
+/* Scroll & filter blocks */
+div.scalr-ui-farmselroles-scroll {
+	width: 40px;
+}
+
+div.scalr-ui-farmselroles-scroll img {
+	position: absolute;
+	cursor: pointer;
+	top: 38px;
+	left: 8px;
+}
+
+div.scalr-ui-farmselroles-scroll-disabled img {
+	cursor: default;
+}
+
+div.scalr-ui-farmselroles-left {
+	left: 40px;
+}
+
+div.scalr-ui-farmselroles-right {
+	right: 0px;
+	width: 40px;
+}
+
+div.scalr-ui-farmselroles-filter-button {
+	background-image: url('/ui/images/ui/farms/selroles/filter.png');
+	height: 29px;
+	top: 5px;
+	right: 7px;
+	width: 27px;
+	background-repeat: no-repeat
+}
+
+div.scalr-ui-farmselroles-filter-button:hover {
+	background-image: url('/ui/images/ui/farms/selroles/filter_hover.png');
+}
+
+div.scalr-ui-farmselroles-filter-button-click {
+	background-image: url('/ui/images/ui/farms/selroles/filter_input_right.png');
+}
+
+div.scalr-ui-farmselroles-filter-button-click:hover {
+	background-image: url('/ui/images/ui/farms/selroles/filter_input_right.png');
+}
+
+div.scalr-ui-farmselroles-filter-input {
+	top: 5px;
+	right: 34px;
+	width: 121px;
+	height: 29px;
+}
+
+div.scalr-ui-farmselroles-filter-input input {
+	border-width: 0px;
+	background-repeat: no-repeat;
+	background-image: url('/ui/images/ui/farms/selroles/filter_input.png');
+	padding-left: 6px;
+	padding-top: 6px;
+	width: 121px;
+	height: 29px;
+}
+
+/* View */
+div.scalr-ui-farmselroles-view {
+	left: 80px;
+	width: 0px;
+	overflow: hidden;
+	border-width: 1px;
+	border-style: none solid none solid;
+	border-color: #8DB2E3;
+}
+
+ul.scalr-ui-farmselroles {
+	background-color: #fff;
+}
+
+ul.scalr-ui-farmselroles {
+	position: relative;
+	display: block;
+}
+
+ul.scalr-ui-farmselroles li {
+	position: relative;
+	float: left;
+	background-image: url('/ui/images/ui/farms/selroles/canvas.png');
+	margin: 5px;
+	height: 120px;
+	width: 120px;
+	cursor: pointer;
+	text-align: center;
+}
+
+ul.scalr-ui-farmselroles li div {
+	position: absolute;
+	bottom: 25px;
+	width: 110px;
+	text-align: center;
+	padding-left: 5px;
+	overflow: hidden;
+	font-family: "Arial";
+	font-size: 12px;
+	color: #666;
+}
+
+ul.scalr-ui-farmselroles li div.full {
+	position: absolute;
+	left: 5px;
+	top: 50px;
+	height: 24px;
+	white-space: nowrap;
+	width: auto;
+	padding: 5px;
+	display: none;
+	background-color: #FFF;
+	border-color: #CBD6ED;
+	border-width: 1px;
+	border-style: solid;
+	color: #333;
+	z-index: 2;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+ul.scalr-ui-farmselroles li div.full-show {
+	display: block;
+}
+
+ul.scalr-ui-farmselroles li img.icon {
+	position: relative;
+	top: 12px;
+}
+
+ul.scalr-ui-farmselroles li img.platform {
+	position: absolute;
+	top: 7px;
+	left: 6px;
+}
+
+ul.scalr-ui-farmselroles li img.arch {
+	position: absolute;
+	top: 57px;
+	right: 7px;
+}
+
+ul.scalr-ui-farmselroles li:hover {
+	background-image: url('/ui/images/ui/farms/selroles/canvas_hover.png');
+}
+
+ul.scalr-ui-farmselroles li.scalr-ui-farmselroles-selected {
+	background-image: url('/ui/images/ui/farms/selroles/canvas_selected.png');
+}
+
+ul.scalr-ui-farmselroles li a {
+	display: none;
+	position: absolute;
+	left: 100px;
+	top: 5px;
+	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat
+}
+
+ul.scalr-ui-farmselroles li:hover a {
+	background-image: url('/ui/images/ui/farms/selroles/close.png');
+	display: block;
+}
+
+ul.scalr-ui-farmselroles li:hover a:hover {
+	background-image: url('/ui/images/ui/farms/selroles/close_hover.png');
+	display: block;
+}
+
+ul.scalr-ui-farmselroles div.location {
+	position: absolute;
+	bottom: 10px;
+	height: 12px;
+	width: 110px;
+	text-align: center;
+}
+
+div.scalr-ui-farmselroles-empty-text {
+	text-align: center;
+	width: 100%;
+	margin-top: 50px;
+}

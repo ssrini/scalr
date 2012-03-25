@@ -1,0 +1,16 @@
+[subject]Your {$entity_name} has been {if $declined}declined{else}approved{/if}[/subject]
+Dear {$client.fullname},
+
+Your contributed {$entity_name} '{$name}' was reviewed by Scalr.net team and {if $declined}declined.
+
+{else}approved! The {$entity_name} is now available for other Scalr.net users.
+We appreciate your contribution to Scalr community! 
+{/if}
+
+{if $comment}
+The Staff left a comment for this review:
+{$comment}
+{/if}
+
+Regards,
+The Scalr Team

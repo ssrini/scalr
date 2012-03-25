@@ -1,0 +1,9 @@
+[subject]New comment on your {$entity_name} on Scalr[/subject]
+Hello {$client.fullname},
+
+{$submitted_by} added comment for your {$entity_name} '{$name}' on Scalr:
+
+
+* {$comment}
+
+--To view comments and reply, visit:{$link}

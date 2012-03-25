@@ -1,0 +1,73 @@
+/* Video icon */
+.x-tool img {
+	background-image: url('/ui/images/theme/tools/tool-sprites.gif') !important;
+}
+
+.x-tool-video {
+	background-position: 0 -360px;
+}
+
+.x-tool-over .x-tool-video {
+	background-position: -15px -360px;
+}
+
+/* Paging toolbar's new icons */
+.x-tbar-page-next {
+	background-image: url('/ui/images/theme/grid/paging_toolbar_sprite.png') !important;
+	background-position: 0px 0px;
+}
+
+.x-item-disabled .x-tbar-page-next {
+	background-image: url('/ui/images/theme/grid/paging_toolbar_sprite.png') !important;
+	background-position: 0px -16px;
+}
+
+.x-tbar-page-last {
+	background-image: url('/ui/images/theme/grid/paging_toolbar_sprite.png') !important;
+	background-position: 0px -32px;
+}
+
+.x-item-disabled .x-tbar-page-last {
+	background-image: url('/ui/images/theme/grid/paging_toolbar_sprite.png') !important;
+	background-position: 0px -48px;
+}
+
+.x-tbar-page-prev {
+	background-image: url('/ui/images/theme/grid/paging_toolbar_sprite.png') !important;
+	background-position: 0px -64px;
+}
+
+.x-item-disabled .x-tbar-page-prev {
+	background-image: url('/ui/images/theme/grid/paging_toolbar_sprite.png') !important;
+	background-position: 0px -80px;
+}
+
+.x-tbar-page-first {
+	background-image: url('/ui/images/theme/grid/paging_toolbar_sprite.png') !important;
+	background-position: 0px -96px;
+}
+
+.x-item-disabled .x-tbar-page-first {
+	background-image: url('/ui/images/theme/grid/paging_toolbar_sprite.png') !important;
+	background-position: 0px -112px;
+}
+
+.x-tbar-loading {
+	background-image: url('/ui/images/theme/grid/paging_toolbar_sprite.png') !important;
+	background-position: 0px -128px;
+}
+
+.x-tbar-loading-refresh {
+	background-image: url('/ui/images/theme/grid/paging_toolbar_sprite.png') !important;
+	background-position: 0px -144px;
+}
+
+/* Toolbar's icons */
+.scalr-ui-btn-icon-filter {
+	background-image: url('/ui/images/theme/grid/paging_toolbar_sprite.png') !important;
+	background-position: 0px -160px !important;
+}
+
+.scalr-ui-btn-icon-download {
+	background-image: url('/ui/images/icons/download_icon_16x16.png') !important;
+}

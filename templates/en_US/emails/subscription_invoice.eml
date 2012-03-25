@@ -1,0 +1,12 @@
+[subject]Scalr subscription[/subject]
+Dear {$client.fullname},
+
+This email has been automatically sent to you upon your sign up on Scalr.net.
+
+You can use the link below anytime to finalize subscription and activate your Scalr account.
+{$link}
+
+If you already paid, it is safe to delete this message.
+
+Regards,
+The Scalr Team

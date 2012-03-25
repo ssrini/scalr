@@ -1,0 +1,62 @@
+div.scalr-ui-billing-changePlan-wrap {
+	width: 138px;
+	height: 158px;
+	padding-top: 6px;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-bottom: 6px;
+}
+
+div.scalr-ui-billing-changePlan-current div.scalr-ui-billing-changePlan-wrap {
+	background-color: #EFF3FA;
+	background: -webkit-gradient(linear, left top, left bottom, from(#9EBAD6), to(#88A2BD));
+	background: -moz-linear-gradient(top, #9EBAD6, #88A2BD);
+	border-radius: 4px;
+	box-shadow: 0 1px 2px #FFF;
+}
+
+div.scalr-ui-billing-changePlan-wrap-title {
+	height: 20px;
+	padding-bottom: 5px;
+}
+
+div.scalr-ui-billing-changePlan-wrap-title span {
+	display: none;
+}
+
+div.scalr-ui-billing-changePlan-current div.scalr-ui-billing-changePlan-wrap-title span {
+	display: block;
+	text-align: center;
+	font: bold 13px Arial;
+	color: #FFF;
+}
+
+.scalr-ui-billing-changePlan-wrap .scalr-ui-btn-custom {
+	height: 123px;
+	width: 120px;
+}
+
+div.scalr-ui-billing-changePlan-btn-name {
+	width: 120px;
+	height: 25px;
+	padding-top: 9px;
+	text-align: center;
+	font: bold 13px Arial;
+	color: #314F73;
+	text-shadow: 0 1px #E5EDF8;
+}
+
+div.scalr-ui-billing-changePlan-btn-icon {
+	width: 120px;
+	text-align: center;
+	height: 68px;
+}
+
+div.scalr-ui-billing-changePlan-btn-price {
+	width: 120px;
+	height: 20px;
+	text-align: center;
+	font: bold 20px Arial;
+	color: #314F73;
+	text-shadow: 0 1px #FFF;
+}

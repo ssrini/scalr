@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<log4php:configuration 
+  xmlns:log4php="http://logging.apache.org/log4php/" 
+  threshold="all" debug="true"> 
+
+<appender name="default" class="LoggerAppenderScalr"> 
+	<param name="host" value="%appconfig{DB_HOST}%" /> 
+	<param name="type" value="mysql" /> 
+	<param name="user" value="%appconfig{DB_USER}%" /> 
+	<param name="password" value="%appconfig{DB_PASS}%" /> 
+	<param name="database" value="%appconfig{DB_NAME}%" /> 
+	<param name="table" value="syslog" /> 
+	<param name="sql" value="INSERT DELAYED INTO syslog SET dtadded='%d{Y-m-d H:i:s}', message=%m, severity='%p', dtadded_time=(NOW()+0)*100000, transactionid='%t', sub_transactionid='%s', caller='%c', farmid='%f'" /> 
+	<filter class="LoggerFilterLevelRange"> 
+		<param name="levelMin" value="WARN" /> 
+		<param name="levelMax" value="FATAL" /> 
+	</filter> 
+</appender>
+<appender name="farm-log" class="LoggerAppenderScalr"> 
+	<param name="host" value="%appconfig{DB_HOST}%" /> 
+	<param name="type" value="mysql" /> 
+	<param name="user" value="%appconfig{DB_USER}%" /> 
+	<param name="password" value="%appconfig{DB_PASS}%" /> 
+	<param name="database" value="%appconfig{DB_NAME}%" /> 
+	<param name="table" value="syslog" /> 
+	<param name="sql" value="INSERT DELAYED INTO syslog SET dtadded='%d{Y-m-d H:i:s}', message=%m, severity='%p', dtadded_time=(NOW()+0)*100000, transactionid='%t', sub_transactionid='%s', caller='%c', farmid='%f'" /> 
+	<filter class="LoggerFilterLevelRange"> 
+		<param name="levelMin" value="INFO" /> 
+		<param name="levelMax" value="FATAL" /> 
+	</filter>  
+	<filter class="LoggerFilterCategoryMatch"> 
+		<param name="stringToMatch" value="/(FarmLog|ScalingLog|DNSLog|Messaging)/"/> 
+	</filter> 
+</appender> 
+<appender name="cron-ng" class="LoggerAppenderScalr"> 
+	<param name="host" value="%appconfig{DB_HOST}%" /> 
+	<param name="type" value="mysql" /> 
+	<param name="user" value="%appconfig{DB_USER}%" /> 
+	<param name="password" value="%appconfig{DB_PASS}%" /> 
+	<param name="database" value="%appconfig{DB_NAME}%" /> 
+	<param name="table" value="syslog" /> 
+	<param name="sql" value="INSERT DELAYED INTO syslog SET dtadded='%d{Y-m-d H:i:s}', message=%m, severity='%p', dtadded_time=(NOW()+0)*100000, transactionid='%t', sub_transactionid='%s', caller='%c', farmid='%f'" /> 
+	<filter class="LoggerFilterLevelRange"> 
+		<param name="levelMin" value="DEBUG" /> 
+		<param name="levelMax" value="INFO" /> 
+		<param name="acceptOnMatch" value="false" /> 
+	</filter> 
+	<filter class="LoggerFilterCategoryMatch"> 
+		<param name="stringToMatch" value="/Scalr_(System|Service)/"/> 
+	</filter> 
+</appender> 
+<appender name="console" class="LoggerAppenderConsole"> 
+	<layout class="LoggerLayoutPattern"> 
+		<param name="ConversionPattern" value="%d{ISO8601} - %-5p [%t:%C{1}@%L] - %m%n"/> 
+	</layout> 
+</appender> 
+
+<root> 
+	<level value="INFO" /> 
+	<appender_ref ref="default" /> 
+	<appender_ref ref="cron-ng" />
+	<appender_ref ref="farm-log" />
+	<appender_ref ref="console" />
+</root> 
+</log4php:configuration> 

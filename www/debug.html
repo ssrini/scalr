@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>Scalr CP</title>
+	<meta http-equiv="Content-Language" content="en-us" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="none" />
+
+	<script type="text/javascript">
+		var head = document.head || document.getElementsByTagName('head')[0];
+		var script = document.createElement('script');
+		script.type = 'text/javascript';
+		script.src = '/ui/js/extjs-4.0/ext-all-debug-2.js';
+		script.onload = function () {
+			Ext.get('loading').down('div').applyStyles('background-position: 0px -400px');
+
+			if (! document.location.hash)
+				document.location.href = "#/dashboard";
+
+			Ext.Ajax.request({
+				url: '/guest/xInit',
+				success: function (response) {
+					try {
+						var obj = Ext.decode(response.responseText);
+
+						if (obj.success == true) {
+							Ext.ns('Scalr');
+							Scalr.InitParams = obj.initParams;
+							Scalr.Init = Ext.emptyFn;
+
+							// loading css
+							(function () {
+								var onloadCss = function () {
+									if (Scalr.InitParams.css.length > 0) {
+										var el = document.createElement('link');
+										el.type = 'text/css';
+										el.rel = 'stylesheet';
+										el.href = Scalr.InitParams.css.shift();
+										head.appendChild(el);
+
+										var checkCss = function () {
+											var flag = false;
+											for (var j = 0; j < document.styleSheets.length; j++)
+												if (document.styleSheets[j].href == el.href)
+													flag = true;
+
+											if (flag)
+												onloadCss();
+											else
+												Ext.Function.defer(checkCss, 50);
+										};
+
+										Ext.Function.defer(checkCss, 50);
+									} else {
+										// loading js
+										var len = Scalr.InitParams.extjs.length;
+										(function () {
+											var onloadJs = function () {
+												if (Scalr.InitParams.extjs.length > 0) {
+													var p = Math.ceil((Scalr.InitParams.extjs.length / len) * 3 + 1) * 100;
+													Ext.get('loading').down('div').applyStyles('background-position: 0px -' + p + 'px');
+													Ext.Loader.injectScriptElement(Scalr.InitParams.extjs.shift(), onloadJs);
+												} else {
+													Scalr.Init();
+												}
+											};
+											onloadJs();
+										})();
+									}
+								};
+								onloadCss();
+							})();
+						} else {
+							Ext.get('loading').down('div').applyStyles('background-position: 0px 0px; margin-left: 340px;');
+							Ext.get('loading').applyStyles('width: 800px; color: red; margin-left: -400px; text-align: center;');
+							Ext.get('loading').child('span').update(obj.errorMessage || 'Service is temporary not available. Please try again in a minute.');
+						}
+					} catch (e) {
+						Ext.get('loading').down('div').applyStyles('background-position: 0px 0px; margin-left: 340px;');
+						Ext.get('loading').applyStyles('width: 800px; color: red; margin-left: -400px; text-align: center;');
+						Ext.get('loading').child('span').update('Service is temporary not available. Please try again in a minute.');
+					}
+				}
+			});
+		}
+		head.appendChild(script);
+
+		var css = document.createElement('link');
+		css.type = 'text/css';
+		css.rel = 'stylesheet';
+		css.href = '/ui/js/extjs-4.0/resources/css/ext-all-2.css';
+		head.appendChild(css);
+	</script>
+
+</head>
+<body>
+	<div id="loading" style="position: absolute; top: 50%; left: 50%; font-size: 18px; font-family: arial; color: #999; width: 140px; height: 140px; margin: -70px 0 0 -70px;">
+		<div style="background-image: url(/ui/images/logo_progress.png); background-position: 0px -500px; width: 100px; height: 100px; margin-left: 10px;"></div>
+		<span>Loading Scalr...</span>
+	</div>
+
+	<div id="body-container" style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; visibility: hidden"></div>
+
+	<div id="body-login-container" style="display: none">
+		<div id="body-login">
+			<form method="POST" action="/guest/xLogin/">
+				<div class="x-field x-form-item x-field-default" style="width: 370px; ">
+					<label class="x-form-item-label x-form-item-label-left" style="margin-right:5px;width:70px;" >E-mail:</label>
+					<div class="x-form-item-body " role="presentation" style="width: 295px; ">
+						<input type="text" name="scalrLogin" size="20" autocomplete="on" class="x-form-field x-form-text" role="textbox" aria-required="true" style="width: 295px; ">
+					</div>
+					<div class="x-clear" role="presentation"></div>
+				</div>
+
+				<div class="x-field x-form-item x-field-default" style="width: 370px; ">
+					<label class="x-form-item-label x-form-item-label-left" style="margin-right:5px;width:70px;" >Password:</label>
+					<div class="x-form-item-body " role="presentation" style="width: 295px; ">
+						<input type="password" name="scalrPass" size="20" autocomplete="on" class="x-form-field x-form-text" role="textbox" aria-required="true" style="width: 295px; ">
+					</div>
+					<div class="x-clear" role="presentation"></div>
+				</div>
+
+				<div class="x-field x-form-item x-field-default x-form-cb-checked" style="width: 370px; ">
+					<div class="x-form-item-body x-form-cb-wrap" role="presentation" style="width: 370px; ">
+						<input type="checkbox" class="x-form-field x-form-checkbox" hidefocus="true" role="checkbox" name="scalrKeepSession" id="scalrKeepSession">
+						<label class="x-form-cb-label x-form-cb-label-after" for="scalrKeepSession">Keep me logged in until I log off</label>
+					</div>
+					<div class="x-clear" role="presentation"></div>
+				</div>
+
+				<div style="display: none">
+					<input type="submit">
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="body-message-container" style="position: absolute; top: 0: left: 0;"></div>
+	<div id="body-message-container-mask" style="display: none; position: absolute; background: #CCC; top: 0: left: 0; width: 100%; height: 100%; opacity: 0.5;"></div>
+
+</body>
+</html>

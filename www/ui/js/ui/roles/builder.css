@@ -1,0 +1,15 @@
+div.scalr-ui-roles-builder-btn-name {
+	width: 109px;
+	height: 20px;
+	text-align: center;
+	font: bold 13px Arial;
+	color: #314F73;
+	text-shadow: 0 1px #FFF;
+}
+
+div.scalr-ui-roles-builder-btn-icon {
+	padding-top: 10px;
+	width: 109px;
+	height: 85px;
+	text-align: center;
+}

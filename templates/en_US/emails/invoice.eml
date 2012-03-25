@@ -1,0 +1,42 @@
+[subject]Scalr.net - Invoice ({$id})[/subject]
+This is your invoice for the period extending {$start_date} to {$end_date}. Thank you for using Scalr.net.
+
+Scalr inc.
+21677 Rainbow drive
+Cupertino, CA 95014
+United States
+
+INVOICE FOR:
+{$client.org}
+{$client.address1} {$client.address2}
+{$client.state} {$client.zipcode}
+{$client.country}
+
+Invoice ID: {$id}
+Invoice amount: ${$amount}
+Invoice to: {$client.email}
+Date of Invoice: {$smarty.now|date_format}
+
+==============================
+==============================
+
+INVOICE  [{$id}]
+
+Quantity     Description                              Price
+---------------------------------------------------------------
+1 month      Scalr.net Basic Subscription            ${$amount}
+                  From {$start_date} to {$end_date}
+             Taxes									 $0.00               
+                                       			     ----------
+                                       Total amount: ${$amount}
+
+==============================
+==============================
+
+
+Thank you for your business,
+The Scalr Team
+
+
+NEED TO CANCEL?
+If you wish to cancel your Scalr.net account, log in to http://paypal.com and cancel subscription {$subscription_id}.

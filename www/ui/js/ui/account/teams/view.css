@@ -1,0 +1,125 @@
+div.scalr-ui-account-teams-list {	
+	width: 100%;
+	border-bottom: 1px;
+	border-bottom-style: solid;
+	border-bottom-color:  #D7E4F4;
+}
+
+div.scalr-ui-account-teams-list div.block {
+	vertical-align: top;
+	display: inline-block;
+	margin-top: 18px;
+	margin-left: 20px; 
+	margin-bottom: 13px;
+}
+
+div.scalr-ui-account-teams-list div.block span.title {
+	font-family: Arial;
+	font-size: 18px;
+	font-weight: bolder;
+	color: #1D4D93;
+	margin: 0;
+}
+
+div.scalr-ui-account-teams-list div.block span.desc {
+	font-family: Verdana;
+	font-size: 12px;
+	color: #333333;
+}
+
+a.scalr-ui-account-teams-list-button div{
+	margin-left: 10px; 
+	display: inline-block;
+	margin-top: 18px;
+	margin-bottom: 7px;
+	padding-top: 2px; 
+	text-align: center; 
+	width: 100px; 
+	height: 20px; 
+	
+	border-radius: 3px; 
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	
+}
+
+a.scalr-ui-account-teams-list-button {
+	color: #fff; 
+	font-family: Arial; 
+	font-size: 13px; 
+	font-weight: bold; 
+	text-decoration: none;
+}
+
+div.scalr-ui-account-teams-list-menu-arrow {
+	background: url('/ui/images/icons/arrow.gif') no-repeat;
+	height:10px;
+	width:10px;
+	cursor: pointer;
+	display: inline-block;
+}
+/*
+		red {
+	background-color: #DD4242; 
+	}
+
+		blue {
+	background-color: #4483D0; 
+	}
+
+		green {
+	background-color: #4BBD48; 
+	}
+
+		orange {
+	background-color: #FF6A2B;
+	}
+ */
+
+div.scalr-ui-account-teams-list-groups {
+	height: 50%;
+}
+
+div.scalr-ui-account-teams-list-groups a div{
+	visibility: hidden;
+}
+
+div.scalr-ui-account-teams-list-groups a:hover div{
+	visibility: visible;
+}
+
+div.scalr-ui-account-teams-list-owner a.scalr-ui-account-teams-list-owner-link {
+	font-weight: bold; 
+	font-family: Arial; 
+	color: #1D4C92;
+	cursor: pointer;
+}
+
+div.scalr-ui-account-teams-list-users, div.scalr-ui-account-teams-list-permissions {
+	display: inline-block;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+
+div.scalr-ui-account-teams-list-category {
+	width: 130px;
+	text-align: right;
+	display: inline-block;
+	font-family: Arial; 
+	font-size: 13px; 
+	font-weight: bolder; 
+	color: #1D4D93;
+	cursor: pointer;
+}
+
+a.scalr-ui-account-teams-list-category-link {
+	font-family: Verdana; 
+	font-size: 12px; 
+	color: #2E4871; 
+	text-decoration: none;
+}
+
+img {
+	border: 0;
+}

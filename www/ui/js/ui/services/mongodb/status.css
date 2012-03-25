@@ -1,0 +1,117 @@
+.scalr-ui-services-mongodb-status-shard {
+	float: left;
+	width: 80px;
+	background: #CBDAEB;
+	border-radius: 4px;
+	padding-bottom: 15px;
+}
+
+.scalr-ui-services-mongodb-status-add {
+	border-radius: 3px;
+	background-color: #D8E3F1;
+	width: 42px;
+	background-image: url('/ui/images/ui/services/mongodb/add_cross.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.scalr-ui-services-mongodb-status-add:hover {
+	background-color: #CBDAEB;
+}
+
+.scalr-ui-services-mongodb-status-add-disable {
+    border-radius: 3px;
+    background-color: #D8E3F1;
+    width: 42px;
+    background-image: url('/ui/images/ui/services/mongodb/add_cross_disable.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.scalr-ui-services-mongodb-status-shard-add {
+	float: left;
+	margin-left: 18px;
+}
+
+.scalr-ui-services-mongodb-status-replica-add {
+	height: 42px;
+	margin-top: 18px;
+}
+
+.scalr-ui-services-mongodb-status-delim {
+	float: left;
+	width: 19px;
+	height: auto;
+	padding-top: 8px;
+}
+
+.scalr-ui-services-mongodb-status-name {
+	font-size: 13px;
+	font-family: arial;
+	font-weight: bold;
+	color: #7197BD;
+	margin-top: 9px;
+	margin-bottom: 9px;
+	text-align: center;
+}
+
+.scalr-ui-services-mongodb-status-replica {
+	height: 50px;
+	width: 50px;
+	background: #F0F4FB; 
+	border: 1px solid #89A9C9;
+	border-radius: 4px;
+	box-shadow: 0 1px #ffffff inset, 0 1px 1px #E2EBF4;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.scalr-ui-services-mongodb-status-vdelim {
+	height: 11px;
+	width: 4px;
+	background: #B9CDE2;
+	box-shadow: 0 1px #E0E9F3;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	margin-left: 38px;
+	margin-right: 38px;
+}
+
+.scalr-ui-services-mongodb-status-hdelim {
+	height: 4px;
+	width: 11px;
+	background: #C9D9EB;
+	box-shadow: 0 1px #EFF4FB;
+	margin-top: 48px;
+	margin-bottom: 23px;
+	margin-left: 4px;
+	margin-right: 4px;
+	display: inline-block;
+}
+
+.scalr-ui-services-mongodb-status-replica-icon {
+	margin-left: 9px;
+	margin-right: 9px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 30px;
+	height: 40px;
+	background-image: url('/ui/images/ui/services/mongodb/status_sprite.png');
+}
+
+.scalr-ui-services-mongodb-status-replica-active {
+	background-position: 0px 0px;
+}
+
+.scalr-ui-services-mongodb-status-replica-pending {
+	background-position: 0px -40px;
+}
+
+.scalr-ui-services-mongodb-status-replica-terminated {
+	background-position: 0px -80px;
+}
+
+.scalr-ui-services-mongodb-status-replica-failed {
+	background-position: 0px -120px;
+}

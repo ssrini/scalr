@@ -1,0 +1,16 @@
+[subject]Your Scalr account {$client.email} is about to expire.[/subject]
+Dear {$client.fullname},
+
+We haven't received a payment notification from the Paypal subscription for your Scalr.net account {$client.email}
+Paypal subscription ID is {$subscription_id}.
+
+Your account will remain active for {$spare_days} days and end on {$halt_date}, unless the payment arrives earlier.
+
+If you have any questions regarding this statement, please feel free to {if $helpdesk_available}submit a ticket at http://support.scalr.net{else}contact billing support at billing@scalr.net{/if} 
+
+NEED TO CANCEL?
+If you wish to cancel your Scalr.net account:
+Log in to http://paypal.com and cancel subscription {$subscription_id}.
+
+Regards,
+The Scalr Team

@@ -1,0 +1,9 @@
+[subject]Scalr account setup[/subject]
+Dear {$client.fullname},
+
+To finish your account setup, please use the following link and set the password for your Scalr account.
+
+{$pwd_link}
+
+Cheers,
+The Scalr Team

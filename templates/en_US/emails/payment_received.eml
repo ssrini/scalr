@@ -1,0 +1,12 @@
+[subject]Payment received for you Scalr account.[/subject]
+Dear {$client.fullname},
+
+We have received a payment confirmation from PayPal for your Scalr.net account {$client.email} at {payment.dtpaid|date_format}.
+
+Your account has been extended for  30 days and will remain active until {payment.dtexpires|date_format}.
+Futher payments on this subscription will be extending your  account for 30 days.
+
+Printable invoice for this payment you can  view at {$service_url}/invoice_{$uniqid}.html
+
+Regards,
+The Scalr Team

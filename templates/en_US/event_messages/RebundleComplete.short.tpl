@@ -1,0 +1,1 @@
+Rebundle started on {$event->DBServer->remoteIp}. Snaphot ID: {$event->SnapshotID}

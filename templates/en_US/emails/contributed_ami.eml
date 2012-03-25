@@ -1,0 +1,15 @@
+[subject]New AMI awaits approval[/subject]
+Dear Scalr Team member,
+
+User {$Client->Fullname},<{$Client->Email}> just submitted an AMI {$role.ami_id} ({$role.name}).
+It needs to be approved to become available for other users.
+
+{if $comments}
+Comments: {$comments}
+{/if}
+
+See all {$count} contributed AMIs that await approval:
+{$link}
+
+Regards,
+The Scalr Team

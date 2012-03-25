@@ -1,0 +1,44 @@
+/*
+ * mb-icons
+ */
+.scalr-mb-icon-info {
+	background: url('/ui/images/icons/mb/info.png') no-repeat;
+}
+
+.scalr-mb-icon-warning {
+	background: url('/ui/images/icons/mb/warning.png') no-repeat;
+}
+
+.scalr-mb-icon-error {
+	background: url('/ui/images/icons/mb/error.png') no-repeat;
+}
+
+.scalr-mb-icon-save {
+	background: url('/ui/images/icons/mb/save.png') no-repeat;
+}
+
+.scalr-mb-icon-action {
+	background: url('/ui/images/icons/mb/action.png') no-repeat;
+}
+
+.scalr-mb-icon-reboot {
+	background: url('/ui/images/icons/mb/reboot.png') no-repeat;
+}
+
+.scalr-mb-icon-delete {
+	background: url('/ui/images/icons/mb/delete.png') no-repeat;
+}
+
+.scalr-mb-icon-launch {
+	background: url('/ui/images/icons/mb/launch.png') no-repeat;
+}
+
+.scalr-mb-icon-terminate {
+	background: url('/ui/images/icons/mb/terminate.png') no-repeat;
+}
+
+.scalr-mb-icon-text {
+	padding: 0px 10px 8px 50px;
+	background-color: inherit;
+	min-height: 32px;
+}

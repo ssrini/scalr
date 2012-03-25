@@ -1,0 +1,118 @@
+.scalr-ui-dashboard-container {
+	min-height: 200px;
+	border: none;
+}
+.scalr-ui-dashboard-container div.remove {
+	visibility: hidden;
+	display: none;
+}
+
+.scalr-ui-dashboard-container-empty {
+	min-height: 200px;
+	border: none;
+}
+.scalr-ui-dashboard-container-empty div.remove {
+	visibility: visible;
+	display: inline-block;
+	color: #04468c;
+	font-family: Arial;
+	font-weight: bold;
+	cursor: pointer;
+}
+.scalr-ui-dashboard-container-empty div.remove a{
+	color: #04468c;
+	font-family: Arial;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.scalr-ui-dashboard-icon-add-column {
+    background: url('/ui/images/ui/dashboard/widgets_control_sprite.png') no-repeat;
+    height:16px;
+    width:16px;
+    background-position: 0px 0px;
+}
+
+.scalr-ui-dashboard-icon-add-widget {
+    background: url('/ui/images/ui/dashboard/widgets_control_sprite.png') no-repeat;
+    height: 16px;
+    width: 16px;
+    background-position: 0px -16px;
+}
+
+.scalr-ui-dashboard-icon-save-panel {
+    background: url('/ui/images/ui/dashboard/widgets_control_sprite.png') no-repeat;
+    height:16px;
+    width:16px;
+    background-position: 0px -32px;
+}
+
+.scalr-ui-dashboard-icon-undo-panel {
+    background: url('/ui/images/ui/dashboard/widgets_control_sprite.png') no-repeat;
+    height:16px;
+    width:16px;
+    background-position: 0px -48px;
+}
+
+.scalr-ui-dashboard-panel .x-panel-dd-spacer {
+	border: 2px dashed #99bbe8;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	margin-bottom: 10px;
+}
+
+.scalr-ui-dashboard-farms-nocontent {
+	color: #04468c;
+	font-family: Arial;
+	font-size: 16pt;
+	text-align: center;
+	line-height: 115px;
+	vertical-align: bottom;
+}
+
+.scalr-ui-dashboard-farms-servers {
+	display: inline-block;
+	margin-right: 5px;
+	width: 94px;
+	height: 94px;
+}
+
+.scalr-ui-dashboard-farms-servers p{
+	color: #04468c;
+	font-family: Arial;
+	font-size: 32px;
+	font-weight: bold;
+	text-align: right;
+}
+
+.scalr-ui-dashboard-widgets-div {
+	width: 100%;
+	border-bottom: 1px;
+	border-bottom-style: solid;
+	border-bottom-color:  #D7E4F4;
+	padding: 5px;
+	overflow-x: hidden;
+}
+
+.scalr-ui-dashboard-widgets-message {
+	font-family: Arial;
+	font-size: 14px;
+	color: #04468c;
+	margin-bottom: 5px;
+	margin-left: 10px;
+	display: inline-block;
+}
+
+.scalr-ui-dashboard-widgets-message a{
+	font-family: Arial;
+	font-size: 14px;
+	color: #04468c;
+	text-decoration: none;
+}
+
+.scalr-ui-dashboard-widgets-desc {
+	font-family: Verdana;
+	font-size: 10px;
+	color: #666;
+	margin-bottom: 3px;
+}

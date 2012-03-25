@@ -1,0 +1,54 @@
+.scalr-ui-dashboard-welcome-body {
+	background: #EFF4FC;
+}
+.scalr-ui-dashboard-welcome-back {
+	background: -webkit-gradient(linear, left top, left bottom, from(#DCE8F7), to(#AFCBEC));
+	background: -moz-linear-gradient(top, #DCE8F7, #AFCBEC);
+	border-radius: 8px;
+	height: 210px;
+}
+.scalr-ui-dashboard-welcome-back:hover {
+	background: -webkit-gradient(linear, left top, left bottom, from(#E6EEFA), to(#BED6F0));
+	background: -moz-linear-gradient(top, #E6EEFA, #BED6F0);
+	border-radius: 8px;
+	height: 210px;
+}
+.scalr-ui-dashboard-welcome-title{
+	font-size: 30px;
+	font-family: RobotoBoldCondensed;
+	text-shadow: 0 1px 1px #ffffff;
+	color: #2F3D62;
+}
+
+.scalr-ui-dashboard-welcome-desc{
+	font-size: 22px;
+	font-family:  RobotoBoldCondensed ;
+	text-shadow: 0 1px 1px #EFF4FC;
+	color: #2F3D62;
+}
+
+.scalr-ui-dashboard-welcome-numbers {
+	font-size: 50px;
+	font-family:  RobotoBoldCondensed ;
+	text-shadow: 0 1px 1px #ffffff;
+	color: #0F990F;
+
+}
+
+.scalr-ui-dashboard-welcome-quest {
+	font-size: 40px;
+	font-family:  RobotoBoldCondensed ;
+	color: #AE4026;
+	text-shadow: 0 1px 1px #fff;
+}
+@font-face {
+	font-family: 'RobotoBoldCondensed';
+	src: url('Roboto-BoldCondensed-webfont.eot');
+	src: url('Roboto-BoldCondensed-webfont.eot?#iefix')
+	format('embedded-opentype'), url('Roboto-BoldCondensed-webfont.woff')
+	format('woff'), url('Roboto-BoldCondensed-webfont.ttf')
+	format('truetype'),
+	url('Roboto-BoldCondensed-webfont.svg#RobotoBoldCondensed') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}

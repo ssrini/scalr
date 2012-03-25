@@ -1,0 +1,157 @@
+div.scalr-ui-farmroleall {
+	background-color: #fff;
+	padding-top: 19px;
+	padding-left: 23px;
+	padding-right: 23px;
+	padding-bottom: 19px;
+}
+
+div.scalr-ui-farmroleall div.block {
+	overflow: visible;
+	background-color: #FFF;
+	height: auto;
+	padding-bottom: 14px;
+}
+
+div.scalr-ui-farmroleall div.title {
+	cursor: pointer;
+	background-image: url('/ui/images/ui/farms/allroles/contract.png');
+	background-color: #E8EDF7;
+	background-repeat: no-repeat;
+	height: 23px;
+
+	-moz-border-radius-topright: 4px;
+	-webkit-border-radius-topright: 4px;
+	border-top-right-radius: 4px;
+}
+
+div.scalr-ui-farmroleall div.title-contract {
+	background-image: url('/ui/images/ui/farms/allroles/expand.png');
+}
+
+div.scalr-ui-farmroleall div.title-disabled {
+	background-image: url('/ui/images/ui/farms/allroles/expand_disable.png');
+	background-color: #EFEFEF;
+	cursor: default;
+}
+
+div.scalr-ui-farmroleall div.title div {
+	border-color: #CBD6ED;
+	border-style: none none solid;
+	border-width: 1px;
+	margin-left: 24px;
+	height: 22px;
+	position: relative;
+}
+
+div.scalr-ui-farmroleall div.title-disabled div {
+	border-color: #DCDCDC;
+}
+
+div.scalr-ui-farmroleall div.title span {
+	position: absolute;
+	top: 4px;
+	left: 8px;
+	font-family: "Verdana";
+	font-size: 12px;
+	font-weight: bold;
+	color: #15428B;
+}
+
+div.scalr-ui-farmroleall div.title-disabled span {
+	color: #666666;
+}
+
+div.scalr-ui-farmroleall ul {
+	overflow: hidden;
+	background-color: #F1F4FA;
+	display: block;
+	height: auto;
+	padding: 19px 23px 5px 23px;
+	position: relative;
+}
+
+div.scalr-ui-farmroleall ul.hidden {
+	display: none;
+}
+
+div.scalr-ui-farmroleall ul li {
+	float: left;
+	width: 120px;
+	height: 120px;
+	overflow: hidden;
+	background-color: #FFF;
+	margin-right: 28px;
+	margin-bottom: 31px;
+	padding: 6px;
+	font-size: 12px;
+	text-align: center;
+
+	border-width: 1px;
+	border-color: #C0D5FA;
+	border-style: solid;
+
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+div.scalr-ui-farmroleall ul li span {
+	font-size: 11px;
+}
+
+div.scalr-ui-farmroleall div.fixed {
+	position: relative;
+	height: 0px;
+}
+
+div.scalr-ui-farmroleall div.arch {
+	position: absolute;
+	top: 90px;
+	text-align: right;
+	width: 106px;
+}
+
+div.scalr-ui-farmroleall div.platforms {
+	position: absolute;
+	text-align: center;
+	top: 70px;
+	width: 106px;
+}
+
+div.scalr-ui-farmroleall ul li div.info {
+	position: absolute;
+	display: none;
+	width: 120px;
+	height: 30px;
+	background-color:#D9EAFD;
+	padding: 3px;
+
+	border-width: 1px;
+	border-color: #C0D5FA;
+	border-style: solid;
+	-moz-border-radius-bottomright: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	-webkit-border-radius-bottomright: 4px;
+	-webkit-border-radius-bottomleft: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+div.scalr-ui-farmroleall ul li img.arch {
+	margin-left: 70px;
+	margin-top: 20px;
+}
+
+div.scalr-ui-farmroleall ul li:hover {
+	background-color: #EEF5FD;
+}
+
+div.scalr-ui-farmroleall ul li.addrolesviewer-selected {
+	-moz-border-radius-bottomright: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-radius-bottomright: 0px;
+	-webkit-border-radius-bottomleft: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+}

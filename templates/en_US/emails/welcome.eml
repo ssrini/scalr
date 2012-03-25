@@ -1,0 +1,28 @@
+[subject]Welcome to the Scalr revolution![/subject]
+Let's get started with Scalr!
+===========================================
+
+Hello {$client.firstname},
+
+You have recently signed up for a free Scalr trial. We are happy to have you on board! 
+Please feel free to contact us at yoda@scalr.com if you have any questions. 
+Or you can go straight to the top: our CEO is reachable at sebastian@scalr.com.
+
+How to get started 
+-------------------------------------------
+
+Scalr is like an espresso machine: it works better with a capsule, or in this case, your cloud credentials. 
+If you don't know where to find them, grab some popcorn and watch our video tutorial:  http://scalr.net/how-to-get-started/
+You will then be able to create your farms and put your infrastructure on cruise control!
+
+If you need additional help, check http://wiki.scalr.net or reply to this email.
+
+Your password
+-------------------------------------------
+
+One more thing. We automatically generated your password. It's {$client.password}
+
+-------------------------------------------
+
+I look forward to hearing from you,
+Yoda, Jedi Master

@@ -1,0 +1,4 @@
+[subject]New Mission Critical Subscription[/subject]
+
+New client have subscribed to the Mission Critical edition:
+Email: {$client.email}

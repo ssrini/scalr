@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<menu>
+	<node title="Websites">
+		<item href="#/dnszones/view" search="SELECT COUNT(*) FROM dns_zones WHERE zone_name LIKE '%s' AND env_id = '{ENV_ID}'">DNS Zones</item>
+		<item href="#/services/apache/vhosts/view" search="SELECT COUNT(*) FROM apache_vhosts WHERE name LIKE '%s' AND env_id = '{ENV_ID}'">Apache virtual hosts</item>
+		<node title="Deployments">
+			<item href="#/dm/tasks/view">Manage</item>
+			<separator />
+			<item href="#/dm/sources/view">Sources</item>
+			<item href="#/dm/applications/view">Applications</item>
+		</node>
+	</node>
+
+	<node title="Server Farms" id='server_farms'>
+		<item href="#/farms/build">Build new</item>
+		<separator />
+        <item href="#/farms/view" search="SELECT COUNT(*) FROM farms WHERE name LIKE '%s' AND env_id ='{ENV_ID}'">View all</item>
+	</node>
+
+	<node title="Servers">
+		<item href="#/servers/view">Manage</item>
+		<separator />
+		<item href="#/servers/import">Create role from non-scalr server</item>
+	</node>
+
+	<node title="Roles">
+		<item href="#/roles/builder">Role builder</item>
+		<separator />
+		<item href="#/roles/view" search="SELECT COUNT(*) FROM roles WHERE name LIKE '%s' AND env_id = '{ENV_ID}'">View all</item>
+		<separator />
+		<node title="Bundle tasks">
+			<item href="#/bundletasks/view">View all</item>
+		</node>
+		<separator />
+		<node title="Service configuration presets">
+			<item href="#/services/configurations/presets">Manage</item>
+			<item href="#/services/configurations/presets/build">Create new</item>
+		</node>
+		<separator />
+		<node title="Custom scaling metrics">
+			<item href="#/scaling/metrics/view">Manage</item>
+			<item href="#/scaling/metrics/create">Create new</item>
+		</node>
+		<separator />
+		<item href="#/services/chef/servers/view">Chef servers</item>
+		<item href="#/services/chef/runlists/view">Chef runlists</item>
+	</node>
+
+	<node title="Scripts">
+		<item href="#/scripts/create">Add new</item>
+		<item href="#/scripts/view" search="SELECT COUNT(*) FROM scripts WHERE name LIKE '%s' AND clientid='{CLIENT_ID}'">View all</item>
+		<separator />
+		<item href="#/scripts/shortcuts">Shortcuts</item>
+	</node>
+
+	<node title="Logs">
+		<item href="#/logs/system">Event log</item>
+		<item href="#/logs/scripting">Scripting log</item>
+		<item href="#/logs/api">API log</item>
+	</node>
+
+	<!--<item<node title="Settings">
+		<item href="/default_records.php">Default DNS records</item>
+	</node>-->
+
+	<node title="Tools">
+        <item href="#/schedulertasks/view" search="SELECT COUNT(*) FROM scheduler_tasks WHERE task_name LIKE '%s' AND client_id='{CLIENT_ID}'" >Tasks scheduler</item>
+		<separator />
+		<item href="#/sshKeys/view">SSH keys manager</item>
+		<!--
+		<separator />
+		<node title="Eucalyptus">
+			<item href="/sec_groups_view.php?platform=eucalyptus">Security groups</item>
+		</node>
+		-->
+		<separator />
+		<node title="Amazon Web Services">
+			<item href="#/tools/aws/s3/manageBuckets">S3 &amp; Cloudfront manager</item>
+			<node title="Amazon IAM">
+				<node title="Server Certificates">
+					<item href="#/tools/aws/iam/servercertificates/view">Manage</item>
+					<item href="#/tools/aws/iam/servercertificates/create">Add new</item>
+				</node>
+			</node>
+			<node title="Amazon EC2">
+				<item href="#/security/groups/view?platform=ec2">Security groups</item>
+				<separator />
+				<item href="#/tools/aws/ec2/eips">Elastic IPs</item>
+				<item href="#/tools/aws/ec2/elb">Elastic Load Balancers</item>
+				<separator />
+				<node title="Elastic Block Storage">
+					<item href="#/tools/aws/ec2/ebs/volumes">Manage volumes</item>
+					<item href="#/tools/aws/ec2/ebs/snapshots">Manage snapshots</item>
+				</node>
+            </node>
+            <!--<node title="Amazon VPC">
+                <node title="VPC">
+                    <item href="#/tools/aws/vpc">Manage</item>
+                    <item href="#/tools/aws/vpc/create">Add new</item>
+                </node>
+                <node title="Subnets">
+                    <item href="#/tools/aws/vpc/subnets">Manage</item>
+                </node>
+                <node title="Gateways &amp; Connections">
+                    <item href="/aws_vpc_gateways_view.php">Manage</item>
+                    <separator />
+                    <item href="#/tools/aws/vpc/gateways/customCreate">Add customer gateway</item>
+                    <item href="#/tools/aws/vpc/gateways/vpnCreate">Add VPN gateway</item>
+                    <item href="#/tools/aws/vpc/gateways/vpnConnectionCreate">Add VPN connection</item>
+                </node>
+                <node title="DHCP options">
+                    <item href="#/tools/aws/vpc/dhcps">Manage</item>
+                    <item href="#/tools/aws/vpc/dhcps/create">Add new</item>
+                </node>
+            </node>            -->
+            <node title="Amazon RDS">
+				<item href="#/tools/aws/rds/instances">View DB instances</item>
+				<separator />
+				<item href="#/tools/aws/rds/sg/view">Security groups</item>
+                <item href="#/tools/aws/rds/pg/view">Parameter groups</item>
+                <separator />
+                <item href="#/tools/aws/rds/snapshots">Manage DB snapshots</item>
+				<separator />
+				<item href="#/tools/aws/rds/instances/create">Launch new DB instance</item>
+			</node>
+		</node>
+		<node title="Cloudstack">
+			<node title="Block Storage">
+				<item href="#/tools/cloudstack/volumes">Manage volumes</item>
+				<item href="#/tools/cloudstack/snapshots">Manage snapshots</item>
+			</node>
+		</node>
+	</node>
+</menu>

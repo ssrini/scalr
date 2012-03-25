@@ -1,0 +1,13 @@
+[subject]Scalr subscription cancelled[/subject]
+
+Dear {$client.fullname},
+
+You have cancelled your Scalr subscription. All your farms and instances are still 
+running and managed by Scalr. On the due date ({$due_date}) Scalr will stop 
+managing your instances.
+
+If you with to reset your subscription, please use this link: 
+https://scalr.net/billing.php (You need to be logged in)
+
+Regards,
+The Scalr Team
