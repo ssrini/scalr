@@ -34,9 +34,6 @@ RewriteEngine On
 # htaccess forbidden
 RewriteRule .htaccess - [F]
 
-RewriteRule \.svn - [F]
-
-
 RewriteRule ^storage/keys/([0-9]+)/(.*)\.pem$ farms_view.php?id=$1&task=download_private_key [NE,L]
 
 #Farm events RSS
@@ -56,12 +53,10 @@ RewriteRule ^ui/js/(.*)-[0-9]+\.css ui/js/$1.css [NE,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-#RewriteCond %{REQUEST_URI} ^[^\.]+$
 RewriteRule ^(v[0-9]+)/.*$ /api.php?version=$1&%{QUERY_STRING}  [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-#RewriteCond %{REQUEST_URI} ^[^\.]+$
 RewriteRule ^.*$ /ui.php [L]
 
 
