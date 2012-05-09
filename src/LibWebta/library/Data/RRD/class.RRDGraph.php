@@ -30,6 +30,9 @@
      * @version 1.0
      * @author Igor Savchenko <http://webta.net/company.html>
      */
+     
+     /* Renamed RRDGraph to RRDGraphScalr to avoid the class RRDGraph redeclared error - Srini */
+     
 	class RRDGraphScalr extends Core
 	{
 	    /**
