@@ -129,8 +129,8 @@
          */
         public static function PlotGraphic($rrddbpath, $image_path, $r)
         {        		
-        	
-        	$graph = new RRDGraph(440, 180, CONFIG::$RRDTOOL_PATH);
+        	/* Use the renamed RRDGraphScalr class to avoid the class RRDGraph redeclared error - Srini */
+        	$graph = new RRDGraphScalr(440, 180, CONFIG::$RRDTOOL_PATH);
         	
 			$graph->AddDEF("mem1", $rrddbpath, "swap", "AVERAGE");
 			$graph->AddDEF("mem2", $rrddbpath, "swapavail", "AVERAGE");
