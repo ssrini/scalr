@@ -118,7 +118,8 @@
         public static function PlotGraphic($rrddbpath, $image_path, $r)
         {		
         	
-        	$graph = new RRDGraph(440, 160, CONFIG::$RRDTOOL_PATH);
+        	/* Use the renamed RRDGraphScalr class to avoid the class RRDGraph redeclared error - Srini */
+        	$graph = new RRDGraphScalr(440, 160, CONFIG::$RRDTOOL_PATH);
 			
         	$graph->AddDEF("a", $rrddbpath, "user", "AVERAGE");
 			$graph->AddDEF("b", $rrddbpath, "system", "AVERAGE");
