@@ -104,7 +104,8 @@
 			foreach($this->RRAs as $RRA)
 				array_push($args, $RRA->__toString());
 				
-			if(rrd_create($this->DBPath, $args, count($args)))
+			// The new version installed requires only 2 parameters - Srini
+			if(rrd_create($this->DBPath, $args))
 				return true;
 			else
 				throw new Exception(_("Cannot create RRD: ".rrd_error()));
@@ -147,7 +148,10 @@
 			foreach ($data as $val)
 				$arg .= ":{$val}";
 			
-			if(rrd_update($this->DBPath, $arg))
+			// The new version parameters have changed - Srini
+			$argarray = array();
+                        array_push($argarray, $arg);
+			if(rrd_update($this->DBPath, $argarray))
 				return true;
 			else 
 				throw new Exception(_("Cannot update RRD: ".rrd_error()));
