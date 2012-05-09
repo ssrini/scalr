@@ -107,7 +107,8 @@
         public static function PlotGraphic($rrddbpath, $image_path, $r)
         {
 
-        	$graph = new RRDGraph(440, 140, CONFIG::$RRDTOOL_PATH);
+		/* Use the renamed RRDGraphScalr class to avoid the class RRDGraph redeclared error - Srini */
+        	$graph = new RRDGraphScalr(440, 140, CONFIG::$RRDTOOL_PATH);
 			$graph->AddDEF("la1", $rrddbpath, "la1", "AVERAGE");
 			
 			$graph->AddVDEF("la1_min", "la1,MINIMUM");
